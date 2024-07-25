@@ -1,0 +1,26 @@
+<div class="form">
+  <label for="Movie Name">Movie Name</label>
+  <input
+    type="text"
+    [(ngModel)]="Title"
+    placeholder="Movie Name"
+    id="Movie Name"
+  />
+  <label for="rating">Rating</label
+  ><input type="text" [(ngModel)]="rating" placeholder="rating" id="rating" />
+  <label for="Description">Description</label
+  ><input
+    type="text"
+    [(ngModel)]="discription"
+    placeholder="Description"
+    id="Description"
+  />
+  <label for="Image URL">Image URL</label
+  ><input
+    type="text"
+    [(ngModel)]="imageURL"
+    placeholder="Image URL"
+    id="Image URL"
+  />
+  <div class="button"><button (click)="add()">Add Movie</button></div>
+</div>
