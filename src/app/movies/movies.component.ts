@@ -1,35 +1,33 @@
 import { Component, Input } from '@angular/core';
 import { RouterEvent, RouterLink, RouterOutlet } from '@angular/router';
-import { ProfileComponent } from './profile/profile.component';
-import { CardComponent } from './card/card.component';
-import { MovieListComponent } from './movie-list/movie-list.component';
-import { CounterComponent } from './counter/counter.component';
-import { AddmovieComponent } from './addmovie/addmovie.component';
-import { DeletemovieComponent } from './deletemovie/deletemovie.component';
-import { MoviesComponent } from './movies/movies.component';
+import { CardComponent } from '../card/card.component';
+import { ProfileComponent } from '../profile/profile.component';
+import { MovieListComponent } from '../movie-list/movie-list.component';
+import { CounterComponent } from '../counter/counter.component';
+import { AddmovieComponent } from '../addmovie/addmovie.component';
+import { DeletemovieComponent } from '../deletemovie/deletemovie.component';
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-movies',
   standalone: true,
   imports: [
     RouterOutlet,
-    ProfileComponent,
     CardComponent,
+    ProfileComponent,
     MovieListComponent,
     CounterComponent,
     AddmovieComponent,
     DeletemovieComponent,
-    MoviesComponent,
-
     RouterLink,
   ],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss',
+  templateUrl: './movies.component.html',
+  styleUrl: './movies.component.scss',
 })
-export class AppComponent {
+export class MoviesComponent {
   showAddMovie: boolean = false;
   showDeleteMovie: boolean = false;
   controls: boolean = false;
+
   toggleAddMovie() {
     this.showAddMovie = !this.showAddMovie;
   }
@@ -39,6 +37,7 @@ export class AppComponent {
   toggle() {
     this.controls = !this.controls;
   }
+
   movieData = [
     {
       Title: 'Love Today',

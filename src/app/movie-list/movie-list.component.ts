@@ -18,4 +18,10 @@ type Movie = {
 })
 export class MovieListComponent {
   @Input() allMovies: any;
+  deleteMovie(movie: Movie) {
+    const index = this.allMovies.indexOf(movie);
+    if (index !== -1) {
+      this.allMovies.splice(index, 1);
+    }
+  }
 }

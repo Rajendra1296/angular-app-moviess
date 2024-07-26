@@ -1,0 +1,13 @@
+<div class="form">
+  <label for="DeleteMovieName">Movie Name to Delete</label>
+  <input
+    type="text"
+    [(ngModel)]="deleteTitle"
+    placeholder="Enter Movie Name"
+    id="DeleteMovieName"
+  />
+
+  <div class="button">
+    <button (click)="deleteMovie()">Delete Movie</button>
+  </div>
+</div>
