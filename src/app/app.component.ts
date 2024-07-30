@@ -8,6 +8,9 @@ import { AddmovieComponent } from './addmovie/addmovie.component';
 import { DeletemovieComponent } from './deletemovie/deletemovie.component';
 import { MoviesComponent } from './movies/movies.component';
 import { MoviedataService } from './moviedata.service';
+import { MatIconModule } from '@angular/material/icon';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-root',
@@ -21,8 +24,10 @@ import { MoviedataService } from './moviedata.service';
     AddmovieComponent,
     DeletemovieComponent,
     MoviesComponent,
-    MoviedataService,
     RouterLink,
+    MatButtonModule,
+    MatDividerModule,
+    MatIconModule,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
@@ -31,6 +36,7 @@ export class AppComponent {
   showAddMovie: boolean = false;
   showDeleteMovie: boolean = false;
   controls: boolean = false;
+  movieData;
   toggleAddMovie() {
     this.showAddMovie = !this.showAddMovie;
   }
@@ -42,7 +48,7 @@ export class AppComponent {
   }
 
   constructor(public moviedataservice: MoviedataService) {
-    const movieData = this.moviedataservice.movieData;
+    this.movieData = this.moviedataservice.movieData;
   }
 
   // movieData = [

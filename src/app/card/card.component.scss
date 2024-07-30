@@ -65,10 +65,11 @@ img {
 }
 
 .delete-button button {
-  background: none;
   font-size: 15px;
   cursor: pointer;
-  border-radius: 8px;
+  background: none;
+  border: none;
+  box-shadow: none;
 }
 .delete-button button:hover {
   background-color: red;

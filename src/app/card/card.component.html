@@ -30,7 +30,9 @@
         </div>
       </div>
       <div class="delete-button">
-        <button (click)="deleteMovie()">Delete</button>
+        <button (click)="deleteMovie()" mat-fab aria-label=" delete icon">
+          <mat-icon>delete</mat-icon>
+        </button>
       </div>
     </div>
   </div>

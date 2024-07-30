@@ -2,7 +2,9 @@ import { CommonModule } from '@angular/common';
 
 import { DeletemovieComponent } from '../deletemovie/deletemovie.component';
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-
+import { MatIconModule } from '@angular/material/icon';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatButtonModule } from '@angular/material/button';
 type Movie = {
   Title: string;
   rating: number;
@@ -12,7 +14,13 @@ type Movie = {
 @Component({
   selector: 'app-card',
   standalone: true,
-  imports: [CommonModule, DeletemovieComponent],
+  imports: [
+    CommonModule,
+    DeletemovieComponent,
+    MatButtonModule,
+    MatDividerModule,
+    MatIconModule,
+  ],
   templateUrl: './card.component.html',
   styleUrl: './card.component.scss',
 })

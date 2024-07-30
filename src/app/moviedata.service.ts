@@ -2,9 +2,12 @@ import { Injectable } from '@angular/core';
 
 @Injectable({
   providedIn: 'root',
+
 })
 export class MoviedataService {
   movieData = [
+
+
     {
       Title: 'Love Today',
       rating: 9.1,
